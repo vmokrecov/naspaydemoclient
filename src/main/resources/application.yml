@@ -1,0 +1,5 @@
+auth-service:
+  tokenUrl: https://demo.naspay.net/auth/token
+  apiUrl: https://demo.naspay.net/api/v1/
+  terminalKey: api-demo
+  terminalSecret: test123
