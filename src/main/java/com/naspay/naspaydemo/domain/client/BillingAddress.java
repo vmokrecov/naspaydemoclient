@@ -1,5 +1,8 @@
 package com.naspay.naspaydemo.domain.client;
 
+import lombok.Data;
+
+@Data
 public class BillingAddress {
 
     private String line1;
