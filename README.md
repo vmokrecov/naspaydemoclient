@@ -3,7 +3,7 @@
 ### Reference Documentation
 Demo client for getting transaction status.
 
-Implement Java client for Naspay REST API.
+Java client implementation for Naspay REST API.
 
 The client must accept Terminal Key and Terminal Secret as constructor arguments
 and implement a single method: getTransactionStatus.
