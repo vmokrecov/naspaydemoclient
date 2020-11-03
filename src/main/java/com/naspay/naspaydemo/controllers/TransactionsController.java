@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TransactionsController {
 
-    private AuthService authService;
-    private Client client;
+    private final AuthService authService;
+    private final Client client;
 
     public TransactionsController(AuthService authService, Client client) {
         this.authService = authService;

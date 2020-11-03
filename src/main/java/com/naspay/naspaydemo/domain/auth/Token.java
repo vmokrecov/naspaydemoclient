@@ -11,13 +11,13 @@ import java.time.LocalDateTime;
 public final class Token {
 
     @JsonProperty("access_token")
-    private String accessToken;
+    private final String accessToken;
     @JsonProperty("token_type")
-    private String tokenType;
+    private final String tokenType;
 
-    private LocalDateTime createAt;
-    private LocalDateTime revokeAt;
-    private LocalDateTime expireAt;
+    private final LocalDateTime createAt;
+    private final LocalDateTime revokeAt;
+    private final LocalDateTime expireAt;
 
     public static boolean isValid(Token token) {
         return !token.revokeAt.isBefore(LocalDateTime.now()) && !token.expireAt.isBefore(LocalDateTime.now());

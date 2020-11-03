@@ -14,7 +14,7 @@ import java.util.List;
 @Configuration
 public class RestClientConfig {
 
-    private AuthService authService;
+    private final AuthService authService;
 
     public RestClientConfig(AuthService authService) {
         this.authService = authService;
