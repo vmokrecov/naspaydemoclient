@@ -15,8 +15,7 @@ import javax.validation.constraints.NotEmpty;
 public class ClientImpl implements Client {
 
     private final AuthServiceProperties properties;
-
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     public ClientImpl(RestTemplate restTemplate, AuthServiceProperties properties) {
         this.restTemplate = restTemplate;
@@ -32,10 +31,14 @@ public class ClientImpl implements Client {
             return tx.getState();
         } catch (final HttpClientErrorException e) {
             switch (e.getStatusCode().value()) {
-                case 400: return "Invalid input";
-                case 401: return "Bearer token is missing or invalid";
-                case 404: return "Transaction not found";
-                default: return "Unknown error";
+                case 400:
+                    return "Invalid input";
+                case 401:
+                    return "Bearer token is missing or invalid";
+                case 404:
+                    return "Transaction not found";
+                default:
+                    return "Unknown error";
             }
         }
     }

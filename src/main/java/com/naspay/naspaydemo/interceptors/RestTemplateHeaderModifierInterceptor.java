@@ -13,7 +13,7 @@ import java.io.IOException;
 @Component
 public class RestTemplateHeaderModifierInterceptor implements ClientHttpRequestInterceptor {
 
-    private AuthService authService;
+    private final AuthService authService;
 
     public RestTemplateHeaderModifierInterceptor(AuthService authService) {
         this.authService = authService;
